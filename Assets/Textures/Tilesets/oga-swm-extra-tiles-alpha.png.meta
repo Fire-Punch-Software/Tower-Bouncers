@@ -1,0 +1,624 @@
+fileFormatVersion: 2
+guid: bf6cd16041a7a3b4bbcf2abc3f451c36
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7981561883536473832
+    second: oga-swm-extra-tiles-alpha_0
+  - first:
+      213: 7911297188222226506
+    second: oga-swm-extra-tiles-alpha_1
+  - first:
+      213: -5528579873178246523
+    second: oga-swm-extra-tiles-alpha_2
+  - first:
+      213: 7250717592731043165
+    second: oga-swm-extra-tiles-alpha_3
+  - first:
+      213: 8068643115173984246
+    second: oga-swm-extra-tiles-alpha_4
+  - first:
+      213: 6417673090935489009
+    second: oga-swm-extra-tiles-alpha_5
+  - first:
+      213: 5054092072718055975
+    second: oga-swm-extra-tiles-alpha_6
+  - first:
+      213: -1409065897640219609
+    second: oga-swm-extra-tiles-alpha_7
+  - first:
+      213: 646083091732810162
+    second: oga-swm-extra-tiles-alpha_8
+  - first:
+      213: -1869283910633437163
+    second: oga-swm-extra-tiles-alpha_9
+  - first:
+      213: -2892030044916340321
+    second: oga-swm-extra-tiles-alpha_10
+  - first:
+      213: 4357418425613022707
+    second: oga-swm-extra-tiles-alpha_11
+  - first:
+      213: 6760534525127239737
+    second: oga-swm-extra-tiles-alpha_12
+  - first:
+      213: -4659467363124552298
+    second: oga-swm-extra-tiles-alpha_13
+  - first:
+      213: -2475311449136308411
+    second: oga-swm-extra-tiles-alpha_14
+  - first:
+      213: -5681313363677019098
+    second: oga-swm-extra-tiles-alpha_15
+  - first:
+      213: 2340914414255981016
+    second: oga-swm-extra-tiles-alpha_16
+  - first:
+      213: 4042847161674671535
+    second: oga-swm-extra-tiles-alpha_17
+  - first:
+      213: -3848209491024187692
+    second: oga-swm-extra-tiles-alpha_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: oga-swm-extra-tiles-alpha_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 87
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 811c20b41cbcb3190800000000000000
+      internalID: -7981561883536473832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oga-swm-extra-tiles-alpha_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 23
+        width: 25
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a40588870e29acd60800000000000000
+      internalID: 7911297188222226506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oga-swm-extra-tiles-alpha_2
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 87
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58226d2a5e98643b0800000000000000
+      internalID: -5528579873178246523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oga-swm-extra-tiles-alpha_3
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 71
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d55c8611c39bf9460800000000000000
+      internalID: 7250717592731043165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oga-swm-extra-tiles-alpha_4
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 47
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7b85be92499ff60800000000000000
+      internalID: 8068643115173984246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oga-swm-extra-tiles-alpha_5
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 87
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f10bc58ca7201950800000000000000
+      internalID: 6417673090935489009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oga-swm-extra-tiles-alpha_6
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 71
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72a3a7066fdb32640800000000000000
+      internalID: 5054092072718055975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oga-swm-extra-tiles-alpha_7
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 55
+        width: 66
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72ca90a180ef17ce0800000000000000
+      internalID: -1409065897640219609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oga-swm-extra-tiles-alpha_8
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 0
+        width: 74
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b9ce1a162957f800800000000000000
+      internalID: 646083091732810162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oga-swm-extra-tiles-alpha_9
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 0
+        width: 90
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 518475aef28fe06e0800000000000000
+      internalID: -1869283910633437163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oga-swm-extra-tiles-alpha_10
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 55
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f99210d2ff17dd7d0800000000000000
+      internalID: -2892030044916340321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oga-swm-extra-tiles-alpha_11
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 39
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f5f764b8f8a87c30800000000000000
+      internalID: 4357418425613022707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oga-swm-extra-tiles-alpha_12
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 55
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93829fde45e32dd50800000000000000
+      internalID: 6760534525127239737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oga-swm-extra-tiles-alpha_13
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 39
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69d5f62ce1f365fb0800000000000000
+      internalID: -4659467363124552298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oga-swm-extra-tiles-alpha_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 49
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54fd5cd0a5de5add0800000000000000
+      internalID: -2475311449136308411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oga-swm-extra-tiles-alpha_15
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 0
+        width: 104
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6240a5cb89be721b0800000000000000
+      internalID: -5681313363677019098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oga-swm-extra-tiles-alpha_16
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 0
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d1c15fc1499c7020800000000000000
+      internalID: 2340914414255981016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oga-swm-extra-tiles-alpha_17
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa5a0d8d2141b1830800000000000000
+      internalID: 4042847161674671535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oga-swm-extra-tiles-alpha_18
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4de673a4bd9689ac0800000000000000
+      internalID: -3848209491024187692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      oga-swm-extra-tiles-alpha_0: -7981561883536473832
+      oga-swm-extra-tiles-alpha_1: 7911297188222226506
+      oga-swm-extra-tiles-alpha_10: -2892030044916340321
+      oga-swm-extra-tiles-alpha_11: 4357418425613022707
+      oga-swm-extra-tiles-alpha_12: 6760534525127239737
+      oga-swm-extra-tiles-alpha_13: -4659467363124552298
+      oga-swm-extra-tiles-alpha_14: -2475311449136308411
+      oga-swm-extra-tiles-alpha_15: -5681313363677019098
+      oga-swm-extra-tiles-alpha_16: 2340914414255981016
+      oga-swm-extra-tiles-alpha_17: 4042847161674671535
+      oga-swm-extra-tiles-alpha_18: -3848209491024187692
+      oga-swm-extra-tiles-alpha_2: -5528579873178246523
+      oga-swm-extra-tiles-alpha_3: 7250717592731043165
+      oga-swm-extra-tiles-alpha_4: 8068643115173984246
+      oga-swm-extra-tiles-alpha_5: 6417673090935489009
+      oga-swm-extra-tiles-alpha_6: 5054092072718055975
+      oga-swm-extra-tiles-alpha_7: -1409065897640219609
+      oga-swm-extra-tiles-alpha_8: 646083091732810162
+      oga-swm-extra-tiles-alpha_9: -1869283910633437163
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
