@@ -2,7 +2,16 @@ using UnityEngine;
 
 public class BaseBall : MonoBehaviour
 {
-    [SerializeField] float speed = 5f;
+    [Header("Physics")]
+    [SerializeField] float speed = 0.5f;
+    [SerializeField] float direction = 1f;
+    [SerializeField] float baseGravity = 0.65f;
+    [SerializeField] float maxFallSpeed = 6f;
+    [SerializeField] float fallSpeedMultiplier = 0.6f;
+    //[SerializeField] float minBounceY = 0.5f;
+    //[SerializeField] float maxBounceY = 3f;
+
+    [Header("Spawning")]
     [SerializeField] GameObject spawnPointLeft = null;
     [SerializeField] GameObject spawnPointRight = null;
     [SerializeField] GameObject ballPrefab = null;
@@ -21,33 +30,28 @@ public class BaseBall : MonoBehaviour
     {
         if (!impulsed)
         {
-            DoImpulse(1f);
+            DoImpulse(direction);
         }
     }
 
     private void FixedUpdate()
     {
         rb2d.linearVelocity = new Vector2(Mathf.Sign(rb2d.linearVelocity.x) * speed, rb2d.linearVelocity.y);
-    }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("¡Bola tocó al jugador!");
-            Destroy(gameObject);
-
-            DoSplit();
-        }
+        //Gravity();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("PlayerShot"))
         {
-            Debug.Log("¡Bola tocó al disparo!");
             Destroy(collision.gameObject);
 
+            DoSplit();
+        }
+
+        if (collision.gameObject.CompareTag("PlayerHitbox"))
+        {
             DoSplit();
         }
     }
@@ -58,12 +62,12 @@ public class BaseBall : MonoBehaviour
         {
             if (spawnPointLeft != null)
             {
-                CreateBall(spawnPointLeft, -1f);
+                CreateBall(spawnPointLeft, -1f * speed);
             }
 
             if (spawnPointRight != null)
             {
-                CreateBall(spawnPointRight, 1f);
+                CreateBall(spawnPointRight, 1f * speed);
             }
         }
 
@@ -82,7 +86,20 @@ public class BaseBall : MonoBehaviour
 
     public void DoImpulse(float horizontalDirection)
     {
-        rb2d.linearVelocity = new Vector2(horizontalDirection, 1f).normalized * speed;
+        rb2d.linearVelocity = new Vector2(horizontalDirection, speed).normalized * speed;
         impulsed = true;
+    }
+
+    private void Gravity()
+    {
+        if (rb2d.linearVelocity.y < 0)
+        {
+            rb2d.gravityScale = baseGravity * fallSpeedMultiplier;
+            rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, Mathf.Max(rb2d.linearVelocity.y, -maxFallSpeed));
+        }
+        else
+        {
+            rb2d.gravityScale = baseGravity;
+        }
     }
 }

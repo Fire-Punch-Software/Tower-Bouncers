@@ -125,6 +125,17 @@
                 },
                 {
                     "name": "",
+                    "id": "71eb6180-633c-470e-a735-34bfba19e41e",
+                    "path": "<HID::8BitDo 8BitDo 64 Bluetooth Controller>/hat",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "143bb1cd-cc10-4eca-a2f0-a3664166fe91",
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
@@ -182,6 +193,17 @@
                     "name": "",
                     "id": "f2e31372-edfe-46f0-b4a6-75844f80e9cd",
                     "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "747e7b79-a033-43d3-9093-eaf83cfe17e3",
+                    "path": "<HID::8BitDo 8BitDo 64 Bluetooth Controller>/button2",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

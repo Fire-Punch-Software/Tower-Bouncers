@@ -4,16 +4,18 @@ using UnityEngine.InputSystem;
 
 public class PlayerCharacter : BaseCharacter
 {
+    [Header("Player movement")]
     [SerializeField] InputActionReference move;
     [SerializeField] InputActionReference jump;
     [SerializeField] InputActionReference shoot;
 
+    [Header("Player physics")]
     [SerializeField] Transform feet;
     [SerializeField] float groundDistance = 0.05f;
     [SerializeField] LayerMask jumpable;
     [SerializeField] bool hasDoubleJump = false;
 
-    [Header("Configuración de Disparo")]
+    [Header("Player shooting")]
     [SerializeField] private int maxProjectiles = 1;
 
     protected override void Awake()
