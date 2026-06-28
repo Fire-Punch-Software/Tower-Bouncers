@@ -17,6 +17,9 @@ public class PlayerCharacter : BaseCharacter
 
     [Header("Player shooting")]
     [SerializeField] private int maxProjectiles = 1;
+    [SerializeField] GameObject secondarySpawnPoint = null;
+    [SerializeField] GameObject secondaryProjectilePrefab = null;
+    [SerializeField] private int secondaryMaxProjectiles = 1;
 
     protected override void Awake()
     {

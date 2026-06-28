@@ -191,6 +191,17 @@
                 },
                 {
                     "name": "",
+                    "id": "0061f2a7-1b85-43e3-bc11-8f139246bfc7",
+                    "path": "<Keyboard>/period",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "f2e31372-edfe-46f0-b4a6-75844f80e9cd",
                     "path": "<Keyboard>/space",
                     "interactions": "",

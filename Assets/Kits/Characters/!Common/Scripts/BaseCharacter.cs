@@ -1,11 +1,14 @@
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEditor.PlayerSettings.SplashScreen;
+using UnityEngine.SceneManagement;
+using System.Collections;
+
+//using static UnityEditor.PlayerSettings.SplashScreen;
 
 public class BaseCharacter : MonoBehaviour
 {
-    [Header("Movement Settings")]
+    [Header("Movement")]
     [SerializeField] float linearSpeed = 1.2f;
     [SerializeField] float jumpSpeed = 2.2f;
     [SerializeField] float baseGravity = 0.65f;
@@ -90,4 +93,30 @@ public class BaseCharacter : MonoBehaviour
         }
     }
 
+    public void NotifyHit(HitBox2D hitBox2D)
+    {
+        Debug.Log("hit");
+        Animator animator = gameObject.GetComponent<Animator>();
+        StartCoroutine(BlinkRed());
+
+        HealthController health = gameObject.GetComponent<HealthController>();
+        health.GetDamage(hitBox2D.damage);
+
+        if (animator.GetBool("IsDead"))
+        {
+            Die();
+        }
+    }
+
+    private IEnumerator BlinkRed()
+    {
+        spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        spriteRenderer.color = Color.white;
+    }
+
+    private void Die()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    }
 }

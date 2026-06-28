@@ -9,7 +9,7 @@ public class Shot : MonoBehaviour
     {
         transform.Translate(direction * speed * Time.deltaTime);
 
-        if (transform.position.y > 3f)
+        if (transform.position.y > 1f || transform.position.y < -1f)
         {
             Destroy(gameObject);
         }

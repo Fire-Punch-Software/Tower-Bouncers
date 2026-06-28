@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalScale: {x: 0.75, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 114170760052524670}
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6e021105343981a9ae77bf4c17d41e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shot
-  speed: 2
+  speed: 1.2
   direction: {x: 0, y: 1, z: 0}
 --- !u!1 &5628246454140779322
 GameObject:
@@ -199,7 +199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &114170760052524670
 Transform:
   m_ObjectHideFlags: 0
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_LightType: 1
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.686
-  m_Color: {r: 0.95149136, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.7877358, g: 0.96299565, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
@@ -251,8 +251,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.11840001, y: -0.094799995, z: 0}
-    m_Extent: {x: 0.6316, y: 0.8675, z: 0}
+    m_Center: {x: -0.13354999, y: -0.48535, z: 0}
+    m_Extent: {x: 0.61315, y: 1.99485, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -263,12 +263,12 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 0.5
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -0.25036082, y: -0.30276856, z: 0}
-  - {x: -0.11689981, y: -0.4653644, z: 0}
-  - {x: 0.004811843, y: -0.41117403, z: 0}
-  - {x: 0.014036334, y: 0.11455543, z: 0}
-  - {x: -0.11301712, y: 0.2735032, z: 0}
-  - {x: -0.24133518, y: 0.17544115, z: 0}
+  - {x: -0.21401192, y: -0.32595754, z: 0}
+  - {x: -0.14753014, y: -1.9814087, z: 0}
+  - {x: -0.043487184, y: -0.34047619, z: 0}
+  - {x: -0.019695312, y: 0.7642685, z: 0}
+  - {x: -0.13019212, y: 1.0090433, z: 0}
+  - {x: -0.24699628, y: 0.7590517, z: 0}
 --- !u!1 &7102292475326861624
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +285,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4108699877637555088
 Transform:
   m_ObjectHideFlags: 0
@@ -308,7 +308,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7102292475326861624}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
