@@ -126,7 +126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4007332670061015779, guid: beb795cdfe8e40f1f9e84692bb17e06c, type: 3}
       propertyPath: m_BodyType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4007332670061015779, guid: beb795cdfe8e40f1f9e84692bb17e06c, type: 3}
       propertyPath: m_CollisionDetection
@@ -200,8 +200,31 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2467808054656314066, guid: beb795cdfe8e40f1f9e84692bb17e06c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4326917938806642387, guid: beb795cdfe8e40f1f9e84692bb17e06c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3485109568655354209}
   m_SourcePrefab: {fileID: 100100000, guid: beb795cdfe8e40f1f9e84692bb17e06c, type: 3}
+--- !u!1 &2632537153790287275 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4326917938806642387, guid: beb795cdfe8e40f1f9e84692bb17e06c, type: 3}
+  m_PrefabInstance: {fileID: 1766794683270679416}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3485109568655354209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2632537153790287275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67fc35ed8c273de4bb809b86126da0fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Grenade
+  speed: 1.5
+  direction: {x: 1, y: 0, z: 0}

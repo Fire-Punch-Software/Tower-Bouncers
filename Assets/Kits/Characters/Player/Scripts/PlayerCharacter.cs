@@ -1,13 +1,21 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerCharacter : BaseCharacter
 {
+    [Header("HUD")]
+    [SerializeField] TextMeshProUGUI currentHealth;
+    [SerializeField] TextMeshProUGUI currentPowerLevel;
+    [SerializeField] TextMeshProUGUI currentLevel;
+    [SerializeField] TextMeshProUGUI gameOver;
+
     [Header("Player movement")]
     [SerializeField] InputActionReference move;
     [SerializeField] InputActionReference jump;
     [SerializeField] InputActionReference shoot;
+    [SerializeField] InputActionReference bomb;
 
     [Header("Player physics")]
     [SerializeField] Transform feet;
@@ -39,9 +47,12 @@ public class PlayerCharacter : BaseCharacter
         shoot.action.Enable();
         shoot.action.performed += OnShoot;
 
+        bomb.action.Enable();
+        bomb.action.performed += OnBomb;
     }
 
     private int activeProjectiles = 0;
+    private bool mustBomb = false;
     protected override void Update()
     {
         base.Update();
@@ -49,6 +60,30 @@ public class PlayerCharacter : BaseCharacter
         Move(rawMove);
 
         activeProjectiles = GameObject.FindGameObjectsWithTag("PlayerShot").Length;
+
+        if (mustBomb && secondarySpawnPoint)
+        {
+            mustBomb = false;
+            animator.SetTrigger("PerformBomb");
+
+            GameObject grenade = Instantiate(secondaryProjectilePrefab, secondarySpawnPoint.transform.position, Quaternion.identity);
+
+            float dirX = transform.localScale.x > 0 ? 1f : -1f;
+            grenade.GetComponent<Grenade>().SetDirection(new Vector3(dirX, 0f, 0f));
+        }
+
+    }
+
+    protected override void Move(Vector2 direction)
+    {
+        bool isShooting = animator.GetCurrentAnimatorStateInfo(0).IsName("Shoot") || animator.GetCurrentAnimatorStateInfo(0).IsName("Bomb");
+
+        if (!isShooting)
+        {
+            float linearSpeed = GetLinearSpeed();
+            rb2d.position += lastMoveDirection * linearSpeed * Time.deltaTime;
+            lastMoveDirection = direction;
+        }
     }
 
     private void OnDisable()
@@ -63,6 +98,9 @@ public class PlayerCharacter : BaseCharacter
 
         shoot.action.Disable();
         shoot.action.performed -= OnShoot;
+
+        bomb.action.Disable();
+        bomb.action.performed -= OnBomb;
     }
 
     private bool OnTheGround()
@@ -95,6 +133,11 @@ public class PlayerCharacter : BaseCharacter
         return activeProjectiles < maxProjectiles;
     }
 
+    private bool CanBomb()
+    {
+        return activeProjectiles < secondaryMaxProjectiles;
+    }
+
     private void OnShoot(InputAction.CallbackContext context)
     {
         if (CanShoot() && OnTheGround())
@@ -103,4 +146,26 @@ public class PlayerCharacter : BaseCharacter
         }
     }
 
+    private void OnBomb(InputAction.CallbackContext context)
+    {
+        if (CanBomb() && OnTheGround())
+        {
+            mustBomb = true;
+        }
+    }
+
+    public override void NotifyHit(HitBox2D hitBox2D)
+    {
+        base.NotifyHit(hitBox2D);
+
+        HealthController health = gameObject.GetComponent<HealthController>();
+
+        currentHealth.text = health.GetHealth().ToString();
+    }
+
+
+    protected override void Die()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Start");
+    }
 }

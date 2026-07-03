@@ -21,6 +21,20 @@ public class HealthController : MonoBehaviour
         }
     }
 
+    public void GetHeal(float heal)
+    {
+        health += heal;
+        if (health > 100f)
+        {
+            health = 100f;
+        }
+    }
+
+    public float GetHealth()
+    {
+        return this.health;
+    }
+
     private void DestroyObject()
     {
         gameObject.SetActive(false);

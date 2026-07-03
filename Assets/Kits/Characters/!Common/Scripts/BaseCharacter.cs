@@ -20,7 +20,7 @@ public class BaseCharacter : MonoBehaviour
     [SerializeField] GameObject slowProjectilePrefab = null;
 
     protected Rigidbody2D rb2d;
-    Animator animator;
+    protected Animator animator;
     SpriteRenderer spriteRenderer;
 
     protected virtual void Awake()
@@ -65,15 +65,10 @@ public class BaseCharacter : MonoBehaviour
         Gravity();
     }
 
-    protected void Move(Vector2 direction)
+    protected virtual void Move(Vector2 direction)
     {
-        bool isShooting = animator.GetCurrentAnimatorStateInfo(0).IsName("Shoot");
-
-        if (!isShooting)
-        {
             rb2d.position += lastMoveDirection * linearSpeed * Time.deltaTime;
             lastMoveDirection = direction;
-        }
     }
 
     internal void NotifyPunch()
@@ -93,7 +88,7 @@ public class BaseCharacter : MonoBehaviour
         }
     }
 
-    public void NotifyHit(HitBox2D hitBox2D)
+    public virtual void NotifyHit(HitBox2D hitBox2D)
     {
         Debug.Log("hit");
         Animator animator = gameObject.GetComponent<Animator>();
@@ -115,8 +110,13 @@ public class BaseCharacter : MonoBehaviour
         spriteRenderer.color = Color.white;
     }
 
-    private void Die()
+    protected virtual void Die()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        GameObject.Destroy(gameObject);
+    }
+
+    protected float GetLinearSpeed()
+    {
+        return linearSpeed;
     }
 }

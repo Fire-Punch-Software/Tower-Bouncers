@@ -39,6 +39,7 @@ public class BaseBall : MonoBehaviour
 
     private void Awake()
     {
+        RoomController.Instance.RegisterEnemy();
         rb2d = GetComponent<Rigidbody2D>();
     }
     
@@ -74,7 +75,6 @@ public class BaseBall : MonoBehaviour
 
     private void DoSplit()
     {
-        Debug.Log("DoSplit");
         if (transform.localScale.x > minScaleToSplit)
         {
             if (spawnPointLeft != null)
@@ -88,6 +88,7 @@ public class BaseBall : MonoBehaviour
             }
         }
 
+        RoomController.Instance.EnemyDied();
         Destroy(gameObject);
     }
 

@@ -25,6 +25,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Bomb",
+                    "type": "Button",
+                    "id": "9d118a47-7ffe-4709-bf8f-82f91ff83bdd",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Jump",
                     "type": "Button",
                     "id": "98d643eb-830d-4c79-be43-06dadb2c15db",
@@ -202,6 +211,61 @@
                 },
                 {
                     "name": "",
+                    "id": "e8eda9e3-ad18-4b4c-ae90-5045c6ee8eb9",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "76f96813-c10d-4e8d-a1a3-4c1e41fabf26",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Bomb",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4051ef80-c441-420e-a0ea-5741e5b8076e",
+                    "path": "<Keyboard>/comma",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Bomb",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dc439e64-ac74-4c16-bc39-243f646bb47b",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Bomb",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8175de55-44bb-4da4-8f8a-5039ccd5bc0b",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Bomb",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "f2e31372-edfe-46f0-b4a6-75844f80e9cd",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -215,6 +279,17 @@
                     "name": "",
                     "id": "747e7b79-a033-43d3-9093-eaf83cfe17e3",
                     "path": "<HID::8BitDo 8BitDo 64 Bluetooth Controller>/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8d34078d-ecad-4451-b5d5-1e653dc5f3c7",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

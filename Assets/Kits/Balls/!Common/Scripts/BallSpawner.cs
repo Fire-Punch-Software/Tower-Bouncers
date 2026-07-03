@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class BallSpawner : MonoBehaviour
 {
-    [Header("HUD")]
-    [SerializeField] TextMeshProUGUI currentLevel;
+    //[Header("HUD")]
+    //[SerializeField] TextMeshProUGUI currentLevel;
 
     [Header("Ball Type")]
     [SerializeField] GameObject ballPrefab;
@@ -46,17 +46,19 @@ public class BallSpawner : MonoBehaviour
 
         do
         {
-            for (int i = 0; i < numBalls * int.Parse(currentLevel.text); i++)
-            {
-                float t = Random.Range(0f, 1f);
-                Vector3 startPosition = Vector3.Lerp(lineTop, lineBottom, t);
+            //for (int i = 0; i < numBalls * int.Parse(currentLevel.text); i++)
+            //{
+            float t = Random.Range(0f, 1f);
+            Vector3 startPosition = Vector3.Lerp(lineTop, lineBottom, t);
 
-                Instantiate(ballPrefab, startPosition, Quaternion.identity);
+            Instantiate(ballPrefab, startPosition, Quaternion.identity);
 
-                yield return new WaitForSeconds(spawnSpeed);
-            }
-            yield return new WaitForSeconds(spawnSpeed * int.Parse(currentLevel.text));
-        } while (true);
+            numBalls--;
+
+            yield return new WaitForSeconds(spawnSpeed);
+            //}
+            //yield return new WaitForSeconds(spawnSpeed * int.Parse(currentLevel.text));
+        } while (numBalls > 0);
     }
 
     IEnumerator PointSpawning()
@@ -65,17 +67,19 @@ public class BallSpawner : MonoBehaviour
 
         do
         {
-            yield return new WaitForSeconds(spawnSpeed * int.Parse(currentLevel.text));
-            for (int i = 0; i < numBalls * int.Parse(currentLevel.text); i++)
-            {
-                yield return new WaitForSeconds(spawnSpeed);
+            //yield return new WaitForSeconds(spawnSpeed * int.Parse(currentLevel.text));
+            //for (int i = 0; i < numBalls * int.Parse(currentLevel.text); i++)
+            //{
+            int j = Random.Range(0, numPoints);
+            Vector3 startPosition = spawnPoints[j].position;
 
-                int j = Random.Range(0, numPoints);
-                Vector3 startPosition = spawnPoints[j].position;
+            Instantiate(ballPrefab, startPosition, Quaternion.identity);
 
-                Instantiate(ballPrefab, startPosition, Quaternion.identity);
-            }
-        } while (true);
+            numBalls--;
+
+            yield return new WaitForSeconds(spawnSpeed);
+            //}
+        } while (numBalls > 0);
     }
 
 }
