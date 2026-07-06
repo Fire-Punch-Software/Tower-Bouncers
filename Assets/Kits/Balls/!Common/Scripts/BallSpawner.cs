@@ -44,42 +44,48 @@ public class BallSpawner : MonoBehaviour
         Vector3 lineTop = spawnLineTop.position;
         Vector3 lineBottom = spawnLineBottom.position;
 
-        do
+        if (numBalls > 0)
         {
-            //for (int i = 0; i < numBalls * int.Parse(currentLevel.text); i++)
-            //{
-            float t = Random.Range(0f, 1f);
-            Vector3 startPosition = Vector3.Lerp(lineTop, lineBottom, t);
+            do
+            {
+                //for (int i = 0; i < numBalls * int.Parse(currentLevel.text); i++)
+                //{
+                float t = Random.Range(0f, 1f);
+                Vector3 startPosition = Vector3.Lerp(lineTop, lineBottom, t);
 
-            Instantiate(ballPrefab, startPosition, Quaternion.identity);
+                Instantiate(ballPrefab, startPosition, Quaternion.identity);
 
-            numBalls--;
+                numBalls--;
 
-            yield return new WaitForSeconds(spawnSpeed);
-            //}
-            //yield return new WaitForSeconds(spawnSpeed * int.Parse(currentLevel.text));
-        } while (numBalls > 0);
+                yield return new WaitForSeconds(spawnSpeed);
+                //}
+                //yield return new WaitForSeconds(spawnSpeed * int.Parse(currentLevel.text));
+            } while (numBalls > 0);
+        }
     }
 
     IEnumerator PointSpawning()
     {
         int numPoints = spawnPoints.Length;
 
-        do
+        if (numBalls > 0)
         {
-            //yield return new WaitForSeconds(spawnSpeed * int.Parse(currentLevel.text));
-            //for (int i = 0; i < numBalls * int.Parse(currentLevel.text); i++)
-            //{
-            int j = Random.Range(0, numPoints);
-            Vector3 startPosition = spawnPoints[j].position;
+            do
+            {
+                //yield return new WaitForSeconds(spawnSpeed * int.Parse(currentLevel.text));
+                //for (int i = 0; i < numBalls * int.Parse(currentLevel.text); i++)
+                //{
+                int j = Random.Range(0, numPoints);
+                Vector3 startPosition = spawnPoints[j].position;
 
-            Instantiate(ballPrefab, startPosition, Quaternion.identity);
+                Instantiate(ballPrefab, startPosition, Quaternion.identity);
 
-            numBalls--;
+                numBalls--;
 
-            yield return new WaitForSeconds(spawnSpeed);
-            //}
-        } while (numBalls > 0);
+                yield return new WaitForSeconds(spawnSpeed);
+                //}
+            } while (numBalls > 0);
+        }
     }
 
 }

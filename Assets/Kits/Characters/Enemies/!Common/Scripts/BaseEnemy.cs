@@ -8,7 +8,6 @@ public class BaseEnemy : MovementController
     [SerializeField] float timeBetweenPunches = 1f;
     public Transform player;
 
-    float lastPunchTime;
     protected override void Update()
     {
         //RunToPlayer();
@@ -25,6 +24,7 @@ public class BaseEnemy : MovementController
         base.Update();
     }
 
+    float lastPunchTime;
     private void CheckAndPerformPunch()
     {
         if (MathF.Abs(player.position.x - transform.position.x) < distanceToPunch)
@@ -32,9 +32,21 @@ public class BaseEnemy : MovementController
             desiredMove = Vector2.zero;
             if (Time.time - lastPunchTime > timeBetweenPunches)
             {
-                PerformPunch();
+                PerformBomb();
                 lastPunchTime = Time.time;
             }
         }
     }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("PlayerGrenade"))
+        {
+            RoomController.Instance.EnemyDied();
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+    }
+
 }

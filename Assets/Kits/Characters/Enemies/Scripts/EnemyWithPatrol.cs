@@ -12,7 +12,7 @@ public class EnemyWithPatrol : BaseEnemy
     protected override void Awake()
     {
         base.Awake();
-        
+
         // VALIDACIÓN waypoints
         if (waypoints == null || waypoints.Length == 0)
         {
@@ -25,6 +25,7 @@ public class EnemyWithPatrol : BaseEnemy
     void Start()
     {
         SetNewDestination();
+        RoomController.Instance.RegisterEnemy();
     }
 
      protected override void Update()

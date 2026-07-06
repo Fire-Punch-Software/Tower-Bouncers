@@ -17,6 +17,7 @@ public class RoomController : MonoBehaviour
 
     public void RegisterEnemy()
     {
+        Debug.Log("Enemy registered");
         enemiesAlive++;
         Debug.Log(enemiesAlive);
     }

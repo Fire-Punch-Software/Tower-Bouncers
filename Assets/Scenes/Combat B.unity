@@ -175,7 +175,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47889716}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d95822bd203ff0c45bf544c5e9e565a2, type: 3}
   m_Name: 
@@ -218,6 +218,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomController
   door: {fileID: 1952400326}
+--- !u!1 &55556881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 55556883}
+  - component: {fileID: 55556882}
+  m_Layer: 0
+  m_Name: RunState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &55556882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55556881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 454484108abbe9353bd33429a14426a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RunState
+  maxHp: 100
+  hp: 100
+--- !u!4 &55556883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55556881}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.00281, y: 1.1629, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &87039235
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,6 +1071,10 @@ PrefabInstance:
       propertyPath: 'waypoints.Array.data[1]'
       value: 
       objectReference: {fileID: 1293032278}
+    - target: {fileID: 2651170862182478483, guid: b984ac3510dbccb4eaf722118e90a793, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8079595357948679150, guid: b984ac3510dbccb4eaf722118e90a793, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.009
@@ -15814,6 +15864,10 @@ PrefabInstance:
       propertyPath: 'waypoints.Array.data[1]'
       value: 
       objectReference: {fileID: 324923206}
+    - target: {fileID: 2651170862182478483, guid: b984ac3510dbccb4eaf722118e90a793, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8079595357948679150, guid: b984ac3510dbccb4eaf722118e90a793, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.9890684
@@ -19615,6 +19669,10 @@ PrefabInstance:
       propertyPath: 'waypoints.Array.data[1]'
       value: 
       objectReference: {fileID: 121851138}
+    - target: {fileID: 2651170862182478483, guid: b984ac3510dbccb4eaf722118e90a793, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8079595357948679150, guid: b984ac3510dbccb4eaf722118e90a793, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.939
@@ -19751,3 +19809,4 @@ SceneRoots:
   - {fileID: 671046682}
   - {fileID: 361878113}
   - {fileID: 1237657088}
+  - {fileID: 55556883}

@@ -130,11 +130,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4007332670061015779, guid: beb795cdfe8e40f1f9e84692bb17e06c, type: 3}
       propertyPath: m_CollisionDetection
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4326917938806642387, guid: beb795cdfe8e40f1f9e84692bb17e06c, type: 3}
       propertyPath: m_Name
       value: PlayerShotGrenade
+      objectReference: {fileID: 0}
+    - target: {fileID: 4326917938806642387, guid: beb795cdfe8e40f1f9e84692bb17e06c, type: 3}
+      propertyPath: m_TagString
+      value: PlayerGrenade
       objectReference: {fileID: 0}
     - target: {fileID: 5403032223883217388, guid: beb795cdfe8e40f1f9e84692bb17e06c, type: 3}
       propertyPath: m_Sprite

@@ -9,6 +9,8 @@ TagManager:
   - Ball
   - Ground
   - PlayerHitbox
+  - Enemy
+  - PlayerGrenade
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - Ball
   - Projectile
   - Background
-  - 
+  - Enemy
   - 
   - 
   - 

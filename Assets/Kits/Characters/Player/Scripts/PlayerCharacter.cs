@@ -34,6 +34,16 @@ public class PlayerCharacter : BaseCharacter
         base.Awake();
     }
 
+    void Start()
+    {
+        currentHealth.text = RunState.Instance.hp.ToString();
+    }
+
+    public void Refresh()
+    {
+        currentHealth.text = RunState.Instance.hp.ToString();
+    }
+
     private void OnEnable()
     {
         move.action.Enable();
@@ -148,7 +158,7 @@ public class PlayerCharacter : BaseCharacter
 
     private void OnBomb(InputAction.CallbackContext context)
     {
-        if (CanBomb() && OnTheGround())
+        if (CanBomb())
         {
             mustBomb = true;
         }
@@ -158,9 +168,9 @@ public class PlayerCharacter : BaseCharacter
     {
         base.NotifyHit(hitBox2D);
 
-        HealthController health = gameObject.GetComponent<HealthController>();
+        RunState.Instance.TakeDamage(hitBox2D.damage);
 
-        currentHealth.text = health.GetHealth().ToString();
+        currentHealth.text = RunState.Instance.hp.ToString();
     }
 
 

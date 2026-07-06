@@ -75,11 +75,18 @@ public class MovementController : MonoBehaviour
         if (mustPunch)
         {
             mustPunch = false;
-            animator.SetTrigger("PerformPunch");
+            animator.SetTrigger("PerformBomb");
         }
     }
 
     protected void PerformPunch()
+    {
+        mustPunch = true;
+        punchHit.gameObject.SetActive(true);
+        Invoke(nameof(DeactivatePunchHit), punchHitDuration);
+    }
+
+    protected void PerformBomb()
     {
         mustPunch = true;
         punchHit.gameObject.SetActive(true);
