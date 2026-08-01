@@ -2,10 +2,13 @@ using UnityEngine;
 
 public class BaseBall : MonoBehaviour
 {
+    [SerializeField] Color spriteColor = Color.clear;
+
     [Header("Spawning")]
     [SerializeField] GameObject spawnPointLeft = null;
     [SerializeField] GameObject spawnPointRight = null;
-    [SerializeField] GameObject ballPrefab = null;
+    //[SerializeField] GameObject ballPrefab = null;
+    [SerializeField] BaseBall ballPrefab = null;
     [SerializeField] float smallerScale = 0.5f;
     [SerializeField] float minScaleToSplit = 0.3f;
 
@@ -35,12 +38,27 @@ public class BaseBall : MonoBehaviour
     }
 
     Rigidbody2D rb2d;
+    SpriteRenderer sr;
     bool impulsed = false;
 
     private void Awake()
     {
         RoomController.Instance.RegisterEnemy();
         rb2d = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
+
+        Color finalColor = spriteColor;
+
+        if (finalColor == Color.clear)
+        {
+            finalColor = Random.ColorHSV(
+                0f, 1f,
+                0.6f, 1f,
+                0.7f, 1f
+            );
+        }
+
+        sr.color = finalColor;
     }
     
     private void Start()
@@ -58,23 +76,28 @@ public class BaseBall : MonoBehaviour
         //Gravity();
     }
 
+    bool isSplitting = false;
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (isSplitting) return;
         if (collision.gameObject.CompareTag("PlayerShot"))
         {
+            isSplitting = true;
             Destroy(collision.gameObject);
-
             DoSplit();
         }
 
         if (collision.gameObject.CompareTag("PlayerHitbox"))
         {
+            isSplitting = true;
             DoSplit();
         }
     }
 
     private void DoSplit()
     {
+        //GetComponent<Collider2D>().enabled = false;
+
         if (transform.localScale.x > minScaleToSplit)
         {
             if (spawnPointLeft != null)
@@ -96,17 +119,11 @@ public class BaseBall : MonoBehaviour
     {
         if (ballPrefab != null)
         {
-            GameObject newBall = Instantiate(ballPrefab, spawnPoint.transform.position, Quaternion.identity);
+            BaseBall newBall = Instantiate(ballPrefab, spawnPoint.transform.position, Quaternion.identity);
             newBall.transform.localScale = transform.localScale * smallerScale;
-            newBall.GetComponent<BaseBall>().DoImpulse(horizontalDirection);
+            newBall.DoImpulse(horizontalDirection);
         }
     }
-
-    //public void DoImpulse(float horizontalDirection)
-    //{
-    //rb2d.linearVelocity = new Vector2(horizontalDirection, speed).normalized * speed;
-    //impulsed = true;
-    //}
 
     public void DoImpulse(float horizontalDirection)
     {

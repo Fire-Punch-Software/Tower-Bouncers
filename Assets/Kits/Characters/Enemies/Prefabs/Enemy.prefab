@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b80932a49c22fd988ab58f31d54312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitBox2D
-  affectedTag: Player
+  affectedTag: PlayerHitbox
   damage: 10
 --- !u!1 &8729212108997065724
 GameObject:

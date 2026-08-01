@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4177692770129671651}
   - component: {fileID: 7785488065894586027}
   - component: {fileID: 2236150363114274082}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: HitBox
-  m_TagString: Ball
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b80932a49c22fd988ab58f31d54312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitBox2D
-  affectedTag: Player
+  affectedTag: PlayerHitbox
   damage: 25
 --- !u!1 &4534568336590996089
 GameObject:
@@ -286,9 +286,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc367eb63cba31347badfb6c800f700a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BaseBall
+  spriteColor: {r: 0, g: 0, b: 0, a: 0}
   spawnPointLeft: {fileID: 4534568336590996089}
   spawnPointRight: {fileID: 7025990700286295378}
-  ballPrefab: {fileID: 6106264124496919067}
+  ballPrefab: {fileID: 2228822628188807546}
   smallerScale: 0.5
   minScaleToSplit: 0.1
   speed: 0.2

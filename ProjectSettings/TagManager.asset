@@ -11,6 +11,7 @@ TagManager:
   - PlayerHitbox
   - Enemy
   - PlayerGrenade
+  - BallHitbox
   layers:
   - Default
   - TransparentFX

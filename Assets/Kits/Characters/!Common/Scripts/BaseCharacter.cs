@@ -19,6 +19,10 @@ public class BaseCharacter : MonoBehaviour
     [SerializeField] GameObject spawnPointTop = null;
     [SerializeField] GameObject slowProjectilePrefab = null;
 
+    [Header("Damage")]
+    [SerializeField] float invulnerabilityTime = 0.5f;
+
+    protected bool isInvulnerable = false;
     protected Rigidbody2D rb2d;
     protected Animator animator;
     SpriteRenderer spriteRenderer;
@@ -90,24 +94,39 @@ public class BaseCharacter : MonoBehaviour
 
     public virtual void NotifyHit(HitBox2D hitBox2D)
     {
-        Debug.Log("hit");
+        //Debug.Log("isInvulnerable: " + isInvulnerable);
+        if (isInvulnerable) return;
+
+        //Debug.Log("hit");
         Animator animator = gameObject.GetComponent<Animator>();
-        StartCoroutine(BlinkRed());
 
         HealthController health = gameObject.GetComponent<HealthController>();
         health.GetDamage(hitBox2D.damage);
+
+        StartCoroutine(InvulnerabilityRoutine());
 
         if (animator.GetBool("IsDead"))
         {
             Die();
         }
     }
-
-    private IEnumerator BlinkRed()
+    private IEnumerator InvulnerabilityRoutine()
     {
-        spriteRenderer.color = Color.red;
-        yield return new WaitForSeconds(0.1f);
+        isInvulnerable = true;
+
+        float elapsed = 0f;
+        while (elapsed < invulnerabilityTime)
+        {
+            spriteRenderer.color = Color.red;
+            yield return new WaitForSeconds(0.08f);
+            spriteRenderer.color = Color.white;
+            yield return new WaitForSeconds(0.08f);
+
+            elapsed += 0.16f;
+        }
+
         spriteRenderer.color = Color.white;
+        isInvulnerable = false;
     }
 
     protected virtual void Die()

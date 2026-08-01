@@ -17,15 +17,15 @@ public class RoomController : MonoBehaviour
 
     public void RegisterEnemy()
     {
-        Debug.Log("Enemy registered");
+        //Debug.Log("Enemy registered");
         enemiesAlive++;
-        Debug.Log(enemiesAlive);
+        //Debug.Log(enemiesAlive);
     }
 
     public void EnemyDied()
     {
         enemiesAlive = Mathf.Max(0, enemiesAlive - 1);
-        Debug.Log(enemiesAlive);
+        //Debug.Log(enemiesAlive);
 
         if (!doorOpened && enemiesAlive == 0)
         {

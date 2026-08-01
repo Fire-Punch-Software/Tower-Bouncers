@@ -15,23 +15,37 @@ public class HitBox2D : MonoBehaviour
         
         GameObject obj = collision.gameObject;
         if (obj == null) return;
-        
+
         if (collision.CompareTag(affectedTag))
         {
-            Debug.Log(affectedTag);
-
-            // Intenta MovementController primero
-            if (collision.TryGetComponent<BaseCharacter>(out var movement))
+            if (affectedTag == "PlayerHitbox")
             {
-                movement.NotifyHit(this);
-                Destroy(gameObject);
-            }
-            // Luego ItemController
-            //else if (collision.TryGetComponent<ItemController>(out var item))
-            //{
+                BaseCharacter player = collision.GetComponentInParent<BaseCharacter>();
+
+                if (player != null)
+                {
+                    player.NotifyHit(this);
+                }
+            } else
+            {
+                //Debug.Log(affectedTag);
+
+                // Intenta MovementController primero
+                if (collision.TryGetComponent<BaseCharacter>(out var movement))
+                {
+                    movement.NotifyHit(this);
+                    Destroy(gameObject);
+                }
+                // Luego ItemController
+                //else if (collision.TryGetComponent<ItemController>(out var item))
+                //{
                 //item.NotifyHit(this);
-            //}
+                //}
+            }
+        }
+        else
+        {
+            Debug.Log("no es " + affectedTag + " es " + collision.tag);
         }
     }
-
 }
