@@ -1,16 +1,9 @@
 using System;
-using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerCharacter : BaseCharacter
 {
-    [Header("HUD")]
-    [SerializeField] TextMeshProUGUI currentHealth;
-    [SerializeField] TextMeshProUGUI currentPowerLevel;
-    [SerializeField] TextMeshProUGUI currentLevel;
-    [SerializeField] TextMeshProUGUI gameOver;
-
     [Header("Player movement")]
     [SerializeField] InputActionReference move;
     [SerializeField] InputActionReference jump;
@@ -32,16 +25,6 @@ public class PlayerCharacter : BaseCharacter
     protected override void Awake()
     {
         base.Awake();
-    }
-
-    void Start()
-    {
-        currentHealth.text = RunState.Instance.hp.ToString();
-    }
-
-    public void Refresh()
-    {
-        currentHealth.text = RunState.Instance.hp.ToString();
     }
 
     private void OnEnable()
@@ -170,12 +153,17 @@ public class PlayerCharacter : BaseCharacter
 
         RunState.Instance.TakeDamage(hitBox2D.damage);
 
-        currentHealth.text = RunState.Instance.hp.ToString();
+        if (RunState.Instance.IsDead())
+        {
+            Die();
+        }
     }
 
 
     protected override void Die()
     {
+        RunState.Instance.ResetRun();
+
         UnityEngine.SceneManagement.SceneManager.LoadScene("Start");
     }
 }

@@ -76,7 +76,6 @@ GameObject:
   - component: {fileID: 486657893032502493}
   - component: {fileID: 61206945223148686}
   - component: {fileID: 8230232619472816929}
-  - component: {fileID: 9010467853937935261}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -276,10 +275,7 @@ MonoBehaviour:
   fallSpeedMultiplier: 0.6
   spawnPointTop: {fileID: 4698216150688479798}
   slowProjectilePrefab: {fileID: 4326917938806642387, guid: beb795cdfe8e40f1f9e84692bb17e06c, type: 3}
-  currentHealth: {fileID: 0}
-  currentPowerLevel: {fileID: 0}
-  currentLevel: {fileID: 0}
-  gameOver: {fileID: 0}
+  invulnerabilityTime: 0.5
   move: {fileID: 1756941955606538066, guid: b208d59841a38a8488c20b80e2152500, type: 3}
   jump: {fileID: -3489325766985684877, guid: b208d59841a38a8488c20b80e2152500, type: 3}
   shoot: {fileID: 1216675675653211944, guid: b208d59841a38a8488c20b80e2152500, type: 3}
@@ -294,19 +290,6 @@ MonoBehaviour:
   secondarySpawnPoint: {fileID: 2083082422485366944}
   secondaryProjectilePrefab: {fileID: 2632537153790287275, guid: 67795c6d385f4a848899d981c36f16e2, type: 3}
   secondaryMaxProjectiles: 2
---- !u!114 &9010467853937935261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3442292297630506580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9551efcf57340874c8e7f8cce0bc23ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthController
-  health: 100
 --- !u!1 &4698216150688479798
 GameObject:
   m_ObjectHideFlags: 0

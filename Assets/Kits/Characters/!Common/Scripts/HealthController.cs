@@ -4,7 +4,7 @@ public class HealthController : MonoBehaviour
 {
     [SerializeField] public float health = 100f;
 
-    public void GetDamage(float damage)
+    public void TakeDamage(float damage)
     {
         Animator animator = gameObject.GetComponent<Animator>();
 

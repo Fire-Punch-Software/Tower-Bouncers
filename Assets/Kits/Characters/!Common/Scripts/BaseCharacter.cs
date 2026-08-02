@@ -101,7 +101,9 @@ public class BaseCharacter : MonoBehaviour
         Animator animator = gameObject.GetComponent<Animator>();
 
         HealthController health = gameObject.GetComponent<HealthController>();
-        health.GetDamage(hitBox2D.damage);
+        if (health != null) {
+            health.TakeDamage(hitBox2D.damage);
+        }
 
         StartCoroutine(InvulnerabilityRoutine());
 
@@ -110,6 +112,7 @@ public class BaseCharacter : MonoBehaviour
             Die();
         }
     }
+
     private IEnumerator InvulnerabilityRoutine()
     {
         isInvulnerable = true;

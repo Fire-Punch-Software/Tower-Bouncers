@@ -105,8 +105,8 @@ GameObject:
   - component: {fileID: 9021323608621398855}
   - component: {fileID: 1478266713337125027}
   - component: {fileID: 4003717440153151866}
-  - component: {fileID: 1407673696144537174}
   - component: {fileID: 937488412488109789}
+  - component: {fileID: 1407673696144537174}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
@@ -253,6 +253,28 @@ CapsuleCollider2D:
   m_Offset: {x: -0.009301186, y: -0.04072634}
   m_Size: {x: 0.14007282, y: 0.15405644}
   m_Direction: 0
+--- !u!95 &937488412488109789
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8729212108997065724}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fb54c41daa91ca242b724171bc96fb9b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1407673696144537174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,25 +299,3 @@ MonoBehaviour:
   waypoints:
   - {fileID: 0}
   - {fileID: 0}
---- !u!95 &937488412488109789
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8729212108997065724}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fb54c41daa91ca242b724171bc96fb9b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0

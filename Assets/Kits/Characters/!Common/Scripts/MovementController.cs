@@ -102,6 +102,6 @@ public class MovementController : MonoBehaviour
     {
         Debug.Log("hit");
         HealthController health = gameObject.GetComponent<HealthController>();
-        health.GetDamage(hitBox2D.damage);
+        health.TakeDamage(hitBox2D.damage);
     }
 }

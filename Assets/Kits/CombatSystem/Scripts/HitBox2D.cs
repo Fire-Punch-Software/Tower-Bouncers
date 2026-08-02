@@ -43,9 +43,5 @@ public class HitBox2D : MonoBehaviour
                 //}
             }
         }
-        else
-        {
-            Debug.Log("no es " + affectedTag + " es " + collision.tag);
-        }
     }
 }

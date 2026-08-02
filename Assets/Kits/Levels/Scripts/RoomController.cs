@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class RoomController : MonoBehaviour
 {
@@ -22,10 +23,11 @@ public class RoomController : MonoBehaviour
         //Debug.Log(enemiesAlive);
     }
 
-    public void EnemyDied()
+    public void EnemyDied(int score)
     {
         enemiesAlive = Mathf.Max(0, enemiesAlive - 1);
         //Debug.Log(enemiesAlive);
+        RunState.Instance.GetScore(score);
 
         if (!doorOpened && enemiesAlive == 0)
         {

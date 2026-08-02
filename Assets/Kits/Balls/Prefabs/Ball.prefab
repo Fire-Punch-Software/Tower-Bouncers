@@ -287,6 +287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BaseBall
   spriteColor: {r: 0, g: 0, b: 0, a: 0}
+  score: 12
   spawnPointLeft: {fileID: 4534568336590996089}
   spawnPointRight: {fileID: 7025990700286295378}
   ballPrefab: {fileID: 2228822628188807546}

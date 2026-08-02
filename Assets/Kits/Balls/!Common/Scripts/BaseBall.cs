@@ -4,6 +4,9 @@ public class BaseBall : MonoBehaviour
 {
     [SerializeField] Color spriteColor = Color.clear;
 
+    [Header("Ball Settings")]
+    [SerializeField] int score = 15;
+
     [Header("Spawning")]
     [SerializeField] GameObject spawnPointLeft = null;
     [SerializeField] GameObject spawnPointRight = null;
@@ -111,7 +114,7 @@ public class BaseBall : MonoBehaviour
             }
         }
 
-        RoomController.Instance.EnemyDied();
+        RoomController.Instance.EnemyDied(score);
         Destroy(gameObject);
     }
 

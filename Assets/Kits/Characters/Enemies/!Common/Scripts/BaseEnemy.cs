@@ -4,6 +4,7 @@ using UnityEngine;
 public class BaseEnemy : MovementController
 {
     [Header("Enemy Settings")]
+    [SerializeField] int score = 25;
     [SerializeField] float distanceToPunch = 0.25f;
     [SerializeField] float timeBetweenPunches = 1f;
     public Transform player;
@@ -43,7 +44,7 @@ public class BaseEnemy : MovementController
     {
         if (collision.gameObject.CompareTag("PlayerGrenade"))
         {
-            RoomController.Instance.EnemyDied();
+            RoomController.Instance.EnemyDied(score);
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
