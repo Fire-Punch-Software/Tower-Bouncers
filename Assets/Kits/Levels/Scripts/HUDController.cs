@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class HUDController : MonoBehaviour
 {
+    [SerializeField] private GameObject healthLevel;
     [SerializeField] private TextMeshProUGUI currentHealth;
     [SerializeField] private TextMeshProUGUI currentScore;
 
@@ -26,9 +27,14 @@ public class HUDController : MonoBehaviour
         }
     }
 
+    private float fullHealthWidth = 6.7f;
     private void UpdateHealth(float hp, float maxHp)
     {
-        currentHealth.text = $"{hp:0}";
+        currentHealth.text = $"{hp:0}/{maxHp:0}";
+
+        float healthPercentage = (hp / maxHp) * 100;
+        healthPercentage = healthPercentage * fullHealthWidth / 100;
+        healthLevel.transform.localScale = new Vector3(healthPercentage, 1, 1);
     }
 
     private void UpdateScore(int score)

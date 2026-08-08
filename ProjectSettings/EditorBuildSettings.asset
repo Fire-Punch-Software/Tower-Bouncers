@@ -6,11 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Title Page.unity
+    guid: e708376494740f443a922d12af06bc62
+  - enabled: 1
     path: Assets/Scenes/Start.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    guid: 5bae66608cc5dbc54a83fe8068503b4e
   - enabled: 1
     path: Assets/Scenes/Combat A.unity
-    guid: e98c933e6a5ea7a7fa4d5e612bd64b5f
+    guid: 454b76b6c4e1a544194f994f03e32981
   - enabled: 1
     path: Assets/Scenes/Combat B.unity
     guid: 378b427379a1f584092712b382034d1f
@@ -20,6 +23,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Base.unity
     guid: ca6a138f9011f047b95a738ccbcd948c
+  - enabled: 1
+    path: Assets/Scenes/Shop.unity
+    guid: 574bc316d06a20f4890137efac6dc025
+  - enabled: 1
+    path: Assets/Scenes/Defeat.unity
+    guid: d291e8dddc9b3fd43b9bbe1397fe05a0
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: 1674a4550a050ab439114e90442b00bc
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: b208d59841a38a8488c20b80e2152500, type: 3}
   m_UseUCBPForAssetBundles: 0

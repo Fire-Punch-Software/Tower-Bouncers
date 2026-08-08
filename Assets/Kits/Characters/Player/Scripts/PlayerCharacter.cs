@@ -164,6 +164,6 @@ public class PlayerCharacter : BaseCharacter
     {
         RunState.Instance.ResetRun();
 
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Start");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Defeat");
     }
 }
